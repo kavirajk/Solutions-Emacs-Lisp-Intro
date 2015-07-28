@@ -42,8 +42,9 @@ to actual height"
 (sit-for 0)
 
 (defun graph-body-print (numbers-list &optional line)
-  "Print graph body with 'numbers-list' 'graph-symbol'
-'graph-blank'"
+  "Print graph body with every element of 'numbers-list' 
+as height of single column. Every column is filled with
+'graph-symbol' and 'graph-blank'"
   (let ((max-height
 	 (apply 'max numbers-list))
 	(from-position)
@@ -61,8 +62,9 @@ to actual height"
     (insert "\n")))
 
 (defun graph-body-print-recursive (number-list &optional line)
-  "Print graph body of 'number-list' with 'graph-symbol'
-and 'graph-blank'"
+    "Print graph body with every element of 'numbers-list' 
+as height of single column. Every column is filled with
+'graph-symbol' and 'graph-blank'"
   (let ((max-height
 	 (apply 'max number-list))
 	(symbol-width (length graph-blank)))
